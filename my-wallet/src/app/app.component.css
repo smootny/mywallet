@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.flexbox {
+background-color: #073B4C;
+display: grid;
+    grid-template-rows: 3fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    height: 100vh;
+}
+.SummaryContainer {
+    justify-content: center;
+    padding-top: 10px;
+}
+p {
+    display: flex;
+    font-family: 'Lato', sans-serif;
+    color: #06D6A0;
+    font-size: 30px;
+    justify-content: center; 
+  }
+span {
+    display: flex;
+    justify-content: center;
+    padding:20px;
+}
+ .button-container{
+    flex-wrap: nowrap;
+    padding: 3rem 3rem 1rem 3rem;
+    gap: 0.5rem;
+   }
+.button-container p{
+    line-height: 1.8rem;
+}
+.calculator-input {
+  display: flex;
+  justify-content: center;  
+} 
+
+    /* #1F2833 - ciemny czarny
+#C5C6C7 - brudny bialy
+#66FCF1 - seledynowy
+#45A29E - ciemniejszy zielony
+#06D6A0 - jasny zielony
+#EF476F - czerwony */

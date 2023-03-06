@@ -1,0 +1,18 @@
+<div class="progress">
+    <div class="progress-done">{{progressPercent}}</div>
+  </div>
+  <div class="input-container">
+    <div>
+      <h3>Value</h3>
+      <input class="input" type="number" [(ngModel)]="finalValue" (input)="changeWidth()" />
+    </div>
+  
+    <div>
+      <h3>Max Value</h3>
+      <input class="max-input" type="number" [(ngModel)]="max" (input)="changeWidth()" />
+    </div>
+  </div>
+  
+  
+  
+  

@@ -1,0 +1,24 @@
+.BoxesContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-content: space-around;
+}
+
+.FirstBox, .SecondBox, .ThirdBox {
+    height: 300px;
+    width: 200px;
+    border: 3px solid #EF476F;
+    border-radius: 15px
+}
+.grid-box {
+    justify-self: center;
+}
+p {
+    display: flex;
+    font-family: 'Lato', sans-serif;
+    color: #06D6A0;
+    font-size: 30px;
+    justify-content: center;
+    margin-top: 10px;
+  }
