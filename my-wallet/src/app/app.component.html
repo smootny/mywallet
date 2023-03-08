@@ -8,9 +8,9 @@
       </div>
       <app-button-generate (resultEvent)="resultNumber = $event.resultNumber; result50 = $event.result50; result30 = $event.result30; result20 = $event.result20"></app-button-generate>
      <app-result-input [number]="resultNumber" [result50]="result50" [result30]="result30" [result20]="result20"></app-result-input>
-     <app-menu-box></app-menu-box>
-     <app-progress-bar></app-progress-bar>
-      </div>  
+     <app-menu-box ></app-menu-box>
+     <app-progress-bar [progress]="90"></app-progress-bar>
+    </div>  
     </div>
 </body>
 </html>
