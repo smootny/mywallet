@@ -6,11 +6,11 @@
       <div class="button-container"> <p>TOTAL AMOUNT:</p> 
       </div> <div class="calculator-input">
       </div>
-      <app-button-generate (resultEvent)="resultNumber = $event.resultNumber; result50 = $event.result50; result30 = $event.result30; result20 = $event.result20"></app-button-generate>
-     <app-result-input [number]="resultNumber" [result50]="result50" [result30]="result30" [result20]="result20"></app-result-input>
-     <app-menu-box></app-menu-box>
-     <app-progress-bar></app-progress-bar>
-      </div>  
+     <app-button-generate (result)="result = $event" (resultEvent)="resultNumber = $event.resultNumber; result50 = $event.result50; result30 = $event.result30; result20 = $event.result20"></app-button-generate>
+       <app-result-input [number]="resultNumber" [result50]="result50" [result30]="result30" [result20]="result20"></app-result-input>
+     <app-menu-box ></app-menu-box>
+    </div>  
+
     </div>
 </body>
 </html>
