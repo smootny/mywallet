@@ -1,5 +1,64 @@
 <div class="currency-container">
     <p>{{ result50 | currency }}</p>
-    <p>{{ result30 | currency}}</p>
-    <p>{{ result20 | currency}}</p>
+    <p>{{ result30 | currency }}</p>
+    <p>{{ result20 | currency }}</p>
 </div>
+<div class="BoxesContainer">
+<div class="grid-box">
+<div class="needs-box">
+    <label class="choose-text" for="select-option">Choose:</label>
+    <select id="select-option" [(ngModel)]="selectedOptionNeeds" (ngModelChange)="onSelectChange()">
+        <option *ngFor="let option of optionsNeeds" [value]="option">{{ option }}</option>
+        <option value="add-new-option">Add a new expense</option>
+    </select>
+    <div class="amount-calculate" *ngIf="selectedOptionNeeds === 'add-new-option'">
+        <input type="text" [(ngModel)]="newOptionNeeds" />
+        <button class="button-calculate" (click)="addNewOptionNeeds()">Add option</button>
+    </div>
+    <div class="amount-calculate">
+            <input type="number" [(ngModel)]="substractionNeeds">
+            <button class="button-calculate" type="button" (click)="subtractNeeds()">Add expense</button>
+    </div>
+</div>
+<div class="FirstBox"></div>
+<p>NEEDS</p></div>
+<div class="grid-box">
+ <div class="wants-box" >
+     <label class="choose-text" for="select-option">Choose:</label>
+     <select id="select-option" [(ngModel)]="selectedOptionWants" (ngModelChange)="onSelectChange()">
+         <option *ngFor="let option of optionsWants" [value]="option">{{ option }}</option>
+         <option value="add-new-option">Add a new expense</option>
+        </select>
+        <div class="amount-calculate" *ngIf="selectedOptionWants === 'add-new-option'">
+            <input type="text" [(ngModel)]="newOptionWants" />
+            <button class="button-calculate" (click)="addNewOptionWants()">Add option</button>
+        </div>
+    </div>
+    <div class="amount-calculate">
+              <input type="number" [(ngModel)]="substractionWants">
+              <button class="button-calculate" type="button" (click)="subtractWants()">Add expense</button>
+    </div>
+    <div class="SecondBox"></div>
+    <P>WANTS</P>
+</div>
+<div class="grid-box">
+     <div class="savings-box">
+         <label class="choose-text" for="select-option">Choose:</label>
+         <select id="select-option" [(ngModel)]="selectedOptionSavings" (ngModelChange)="onSelectChange()">
+             <option *ngFor="let option of optionsSavings" [value]="option">{{ option }}</option>
+             <option value="add-new-option">Add a new expense</option>
+            </select>
+            <div class="amount-calculate" *ngIf="selectedOptionSavings === 'add-new-option'">
+                <input type="text" [(ngModel)]="newOptionSavings" />
+                <button class="button-calculate" (click)="addNewOptionSavings()">Add option</button>
+            </div>
+        </div>
+        <div class="amount-calculate">
+                  <input type="number" [(ngModel)]="substractionSavings">
+                  <button class="button-calculate" type="button" (click)="subtractSavings()">Add expense</button>
+        </div>
+        <div class="ThirdBox"></div>
+        <P>SAVINGS</P>
+</div>
+<p id="total-balance"> Monthly balance: {{ allResults | currency }}</p>
+        </div>
